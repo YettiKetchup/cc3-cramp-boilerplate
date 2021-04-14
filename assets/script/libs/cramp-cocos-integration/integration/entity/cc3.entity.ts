@@ -63,7 +63,7 @@ export default class CocosCreatorEntity extends Component
         const components = this.getComponents(Component).filter(c => c instanceof CocosCreatorEntity ? false : true);
 
         components.forEach(component => {
-            ComponentStateController.takeSnapshot(this.uuid, component);
+            ComponentStateController.makeSnapshot(this.uuid, component);
             this._components.push(component);
         });
         
